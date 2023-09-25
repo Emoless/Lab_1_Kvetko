@@ -85,6 +85,7 @@ public class MainFrame extends JFrame implements ActionListener {
     public static JLabel SearchInSubdirectories;
 
     public static JLabel dirform;
+    public static JLabel input;
 
     public static JLabel fileform;
 
@@ -179,8 +180,12 @@ public class MainFrame extends JFrame implements ActionListener {
         path_input.setDisabledTextColor(Color.BLACK);
         path_input.setBorder(new CompoundBorder(roundedBorder, new EmptyBorder(3, 3, 3, 3)));
         path_input.setFont(new Font("Arial", Font.BOLD, 12));
-        path_input.setText("Your directory");
         path_input.setBackground(new Color(225, 243, 246, 255));
+
+        input = new JLabel("Choose directory to start (...)");
+        input.setBounds(17, 5, 225, 35);
+        input.setFont(new Font("Arial", Font.BOLD, 12));
+
 
         files_type = new JTextField();
         files_type.setBounds(15, 155, 225, 35);
@@ -238,20 +243,6 @@ public class MainFrame extends JFrame implements ActionListener {
         depth.setBounds(300, 166, 90, 14);
         depth.setFont(new Font("Arial", Font.BOLD, 14));
 
-//        Wait = new JDialog(this, "Please, wait",true);
-//        Wait.getContentPane().setBackground(new Color(253, 253, 253, 255));
-//        Wait.setEnabled(false);
-//        JLabel waiting = new JLabel("Threads are working");
-//        waiting.setFont(new Font("Arial", Font.BOLD, 10));
-//        waiting.setHorizontalAlignment(SwingConstants.CENTER);
-//        waiting.setVerticalAlignment(SwingConstants.CENTER);
-//        Wait.setSize(150, 150);
-//        Wait.setResizable(false);
-//        Wait.setLocation(this.getX() + 135, this.getY() + 190);
-//        ImageIcon waiticon = new ImageIcon("free-icon-settings-6904098.png");
-//        Wait.setIconImage(waiticon.getImage());
-//        Wait.add(waiting);
-
 
         this.add(search_file_button);
         this.add(choose_file_button);
@@ -272,6 +263,7 @@ public class MainFrame extends JFrame implements ActionListener {
         this.add(findfiles);
         this.add(dirform);
         this.add(fileform);
+        this.add(input);
 
     }
 
